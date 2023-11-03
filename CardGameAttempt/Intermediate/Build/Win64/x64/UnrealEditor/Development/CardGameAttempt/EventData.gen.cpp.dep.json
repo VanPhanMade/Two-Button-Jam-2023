@@ -1,0 +1,41 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "c:\\users\\van\\documents\\projects_unreal\\cardgameattempt\\intermediate\\build\\win64\\unrealeditor\\inc\\cardgameattempt\\uht\\eventdata.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\van\\documents\\projects_unreal\\cardgameattempt\\intermediate\\build\\win64\\x64\\cardgameattempteditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
+        "Includes": [
+            "c:\\users\\van\\documents\\projects_unreal\\cardgameattempt\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\cardgameattempt\\definitions.cardgameattempt.h",
+            "c:\\users\\van\\documents\\projects_unreal\\cardgameattempt\\source\\cardgameattempt\\public\\data\\eventdata.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\source\\runtime\\engine\\classes\\engine\\datatable.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\source\\runtime\\engine\\public\\datatableutils.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\datatable.generated.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\source\\runtime\\umg\\public\\components\\image.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\source\\runtime\\umg\\public\\components\\widget.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\source\\runtime\\umg\\public\\fieldnotification\\fieldnotificationdeclaration.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\source\\runtime\\umg\\public\\fieldnotification\\fieldid.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\source\\runtime\\umg\\public\\fieldnotification\\fieldvariant.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\fieldid.generated.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\source\\runtime\\umg\\public\\fieldnotification\\iclassdescriptor.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\source\\runtime\\umg\\public\\fieldnotification\\ifieldvaluechanged.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\ifieldvaluechanged.generated.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\source\\runtime\\umg\\public\\components\\visual.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\visual.generated.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\source\\runtime\\umg\\public\\components\\slatewrappertypes.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\slatewrappertypes.generated.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\source\\runtime\\umg\\public\\slate\\widgettransform.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\widgettransform.generated.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\source\\runtime\\umg\\public\\blueprint\\widgetnavigation.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\source\\runtime\\slatecore\\public\\types\\navigationmetadata.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\widgetnavigation.generated.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\widget.generated.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\source\\runtime\\engine\\public\\slate\\slatetextureatlasinterface.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\slatetextureatlasinterface.generated.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\source\\runtime\\engine\\classes\\engine\\streamablemanager.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\image.generated.h",
+            "c:\\users\\van\\documents\\projects_unreal\\cardgameattempt\\intermediate\\build\\win64\\unrealeditor\\inc\\cardgameattempt\\uht\\eventdata.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

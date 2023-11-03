@@ -1,0 +1,14 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "c:\\users\\van\\documents\\projects_unreal\\cardgameattempt\\source\\cardgameattempt\\cardgameattempt.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\van\\documents\\projects_unreal\\cardgameattempt\\intermediate\\build\\win64\\x64\\cardgameattempteditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
+        "Includes": [
+            "c:\\users\\van\\documents\\projects_unreal\\cardgameattempt\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\cardgameattempt\\definitions.cardgameattempt.h",
+            "c:\\users\\van\\documents\\projects_unreal\\cardgameattempt\\source\\cardgameattempt\\cardgameattempt.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
