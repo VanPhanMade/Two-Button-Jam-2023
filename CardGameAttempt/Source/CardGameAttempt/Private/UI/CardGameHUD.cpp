@@ -7,6 +7,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "Engine/DataTable.h"
 #include "Data/EventData.h"
+#include "Kismet/KismetSystemLibrary.h"
 
 /** Audio libraries */
 #include "Sound/SoundBase.h"
@@ -32,6 +33,14 @@ void UCardGameHUD::FireLeftAction()
         {
             FName NextEvent = CurrentEvent->LeftCardData.ConnectedEvent;
             CurrentEvent = EventsDataTable->FindRow<FEventData>(NextEvent, ContextString, true);   
+            if(NextEvent == FName(TEXT("END")))
+            {
+                UKismetSystemLibrary::QuitGame(this, GetOwningPlayer(), EQuitPreference::Quit, true);
+            }
+            if(NextEvent == FName(TEXT("REPLAY")))
+            {
+                UGameplayStatics::OpenLevel(GetWorld(), FName(TEXT("StartingMap")));
+            }
         }
 
         PlayAnimation(LeftCardConfirmedAnim, 0.f, 1, EUMGSequencePlayMode::Forward, 1.f, false);
@@ -110,6 +119,14 @@ void UCardGameHUD::FireRightAction()
         {
             FName NextEvent = CurrentEvent->RightCardData.ConnectedEvent;
             CurrentEvent = EventsDataTable->FindRow<FEventData>(NextEvent, ContextString, true);
+            if(NextEvent == FName(TEXT("END")))
+            {
+                UKismetSystemLibrary::QuitGame(this, GetOwningPlayer(), EQuitPreference::Quit, true);
+            }
+            if(NextEvent == FName(TEXT("REPLAY")))
+            {
+                UGameplayStatics::OpenLevel(GetWorld(), FName(TEXT("StartingMap")));
+            }
         }
 
         PlayAnimation(RightCardConfirmedAnim, 0.f, 1, EUMGSequencePlayMode::Forward, 1.f, false);
@@ -151,7 +168,6 @@ void UCardGameHUD::LoadLeftEvent()
 {
     if(CurrentEvent)
     {
-        
         EventImg->SetBrushFromTexture(CurrentEvent->EventImage);
         LeftCard->LoadNewCardData(CurrentEvent->LeftCardData.CardName, CurrentEvent->LeftCardData.CardDescription, CurrentEvent->LeftCardData.CardImage);
         RightCard->LoadNewCardData(CurrentEvent->RightCardData.CardName, CurrentEvent->RightCardData.CardDescription, CurrentEvent->RightCardData.CardImage); 
@@ -159,10 +175,7 @@ void UCardGameHUD::LoadLeftEvent()
         
         ACharacter* myCharacter = UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
         FVector PlayerLoc = myCharacter->GetActorLocation();
-        if(IntroAudio)
-        {
-            UGameplayStatics::SpawnSoundAtLocation(this, IntroAudio, PlayerLoc);
-        }
+        if(IntroAudio) UGameplayStatics::SpawnSoundAtLocation(this, IntroAudio, PlayerLoc);
 
         
         GetWorld()->GetTimerManager().SetTimer(PlayerInputDelay, this, &ThisClass::EnablePlayerInput, CurrentEvent->EventDialogueDuration, false);
@@ -175,8 +188,6 @@ void UCardGameHUD::LoadRightEvent()
 {
     if(CurrentEvent)
     {
-        
-
         EventImg->SetBrushFromTexture(CurrentEvent->EventImage);
         LeftCard->LoadNewCardData(CurrentEvent->LeftCardData.CardName, CurrentEvent->LeftCardData.CardDescription, CurrentEvent->LeftCardData.CardImage);
         RightCard->LoadNewCardData(CurrentEvent->RightCardData.CardName, CurrentEvent->RightCardData.CardDescription, CurrentEvent->RightCardData.CardImage); 
@@ -184,10 +195,7 @@ void UCardGameHUD::LoadRightEvent()
 
         ACharacter* myCharacter = UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
         FVector PlayerLoc = myCharacter->GetActorLocation();
-        if(IntroAudio)
-        {
-            UGameplayStatics::SpawnSoundAtLocation(this, IntroAudio, PlayerLoc);
-        }
+        if(IntroAudio) UGameplayStatics::SpawnSoundAtLocation(this, IntroAudio, PlayerLoc);
 
         
         GetWorld()->GetTimerManager().SetTimer(PlayerInputDelay, this, &ThisClass::EnablePlayerInput, CurrentEvent->EventDialogueDuration, false);
