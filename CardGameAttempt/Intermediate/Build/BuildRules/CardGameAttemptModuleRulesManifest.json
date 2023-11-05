@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"C:\\Users\\Van\\Documents\\Projects_Unreal\\CardGameAttempt\\Source\\CardGameAttempt\\CardGameAttempt.Build.cs",
-		"C:\\Users\\Van\\Documents\\Projects_Unreal\\CardGameAttempt\\Source\\CardGameAttempt.Target.cs",
-		"C:\\Users\\Van\\Documents\\Projects_Unreal\\CardGameAttempt\\Source\\CardGameAttemptEditor.Target.cs"
+		"C:\\Users\\Van\\Documents\\Projects_Unreal\\Repositories\\Two-Button-Jam-2023\\CardGameAttempt\\Source\\CardGameAttempt\\CardGameAttempt.Build.cs",
+		"C:\\Users\\Van\\Documents\\Projects_Unreal\\Repositories\\Two-Button-Jam-2023\\CardGameAttempt\\Source\\CardGameAttempt.Target.cs",
+		"C:\\Users\\Van\\Documents\\Projects_Unreal\\Repositories\\Two-Button-Jam-2023\\CardGameAttempt\\Source\\CardGameAttemptEditor.Target.cs"
 	],
 	"EngineVersion": "5.2.1"
 }

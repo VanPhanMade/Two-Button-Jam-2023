@@ -14,14 +14,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define CARDGAMEATTEMPT_EventData_generated_h
 
-#define FID_Users_Van_Documents_Projects_Unreal_CardGameAttempt_Source_CardGameAttempt_Public_Data_EventData_h_10_GENERATED_BODY \
+#define FID_Users_Van_Documents_Projects_Unreal_Repositories_Two_Button_Jam_2023_CardGameAttempt_Source_CardGameAttempt_Public_Data_EventData_h_10_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FCardData_Statics; \
 	CARDGAMEATTEMPT_API static class UScriptStruct* StaticStruct();
 
 
 template<> CARDGAMEATTEMPT_API UScriptStruct* StaticStruct<struct FCardData>();
 
-#define FID_Users_Van_Documents_Projects_Unreal_CardGameAttempt_Source_CardGameAttempt_Public_Data_EventData_h_28_GENERATED_BODY \
+#define FID_Users_Van_Documents_Projects_Unreal_Repositories_Two_Button_Jam_2023_CardGameAttempt_Source_CardGameAttempt_Public_Data_EventData_h_28_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FEventData_Statics; \
 	CARDGAMEATTEMPT_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -30,7 +30,7 @@ template<> CARDGAMEATTEMPT_API UScriptStruct* StaticStruct<struct FCardData>();
 template<> CARDGAMEATTEMPT_API UScriptStruct* StaticStruct<struct FEventData>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_Van_Documents_Projects_Unreal_CardGameAttempt_Source_CardGameAttempt_Public_Data_EventData_h
+#define CURRENT_FILE_ID FID_Users_Van_Documents_Projects_Unreal_Repositories_Two_Button_Jam_2023_CardGameAttempt_Source_CardGameAttempt_Public_Data_EventData_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

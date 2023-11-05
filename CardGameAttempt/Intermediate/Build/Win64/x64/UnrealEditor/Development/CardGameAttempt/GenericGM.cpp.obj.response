@@ -1,6 +1,6 @@
-C:\Users\Van\Documents\Projects_Unreal\CardGameAttempt\Source\CardGameAttempt\Private\GameModes\GenericGM.cpp
+C:\Users\Van\Documents\Projects_Unreal\Repositories\Two-Button-Jam-2023\CardGameAttempt\Source\CardGameAttempt\Private\GameModes\GenericGM.cpp
 /I .
-/I C:\Users\Van\Documents\Projects_Unreal\CardGameAttempt\Source\CardGameAttempt\Private
+/I C:\Users\Van\Documents\Projects_Unreal\Repositories\Two-Button-Jam-2023\CardGameAttempt\Source\CardGameAttempt\Private
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\UHT
 /I ..\Shaders\Shared
 /I Runtime\Engine\Classes
@@ -273,9 +273,9 @@ C:\Users\Van\Documents\Projects_Unreal\CardGameAttempt\Source\CardGameAttempt\Pr
 /I Runtime\MovieSceneCapture\Public
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\AnimationDataController\UHT
 /I Developer\AnimationDataController\Public
-/I C:\Users\Van\Documents\Projects_Unreal\CardGameAttempt\Intermediate\Build\Win64\UnrealEditor\Inc\CardGameAttempt\UHT
-/I C:\Users\Van\Documents\Projects_Unreal\CardGameAttempt\Source
-/I C:\Users\Van\Documents\Projects_Unreal\CardGameAttempt\Source\CardGameAttempt\Public
+/I C:\Users\Van\Documents\Projects_Unreal\Repositories\Two-Button-Jam-2023\CardGameAttempt\Intermediate\Build\Win64\UnrealEditor\Inc\CardGameAttempt\UHT
+/I C:\Users\Van\Documents\Projects_Unreal\Repositories\Two-Button-Jam-2023\CardGameAttempt\Source
+/I C:\Users\Van\Documents\Projects_Unreal\Repositories\Two-Button-Jam-2023\CardGameAttempt\Source\CardGameAttempt\Public
 /I ..\Plugins\EnhancedInput\Intermediate\Build\Win64\UnrealEditor\Inc\EnhancedInput\UHT
 /I ..\Plugins\EnhancedInput\Source\EnhancedInput\Public
 /I ..\Plugins\EnhancedInput\Source
@@ -287,12 +287,12 @@ C:\Users\Van\Documents\Projects_Unreal\CardGameAttempt\Source\CardGameAttempt\Pr
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"
-/FI"C:\Users\Van\Documents\Projects_Unreal\CardGameAttempt\Intermediate\Build\Win64\x64\CardGameAttemptEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h"
-/FI"C:\Users\Van\Documents\Projects_Unreal\CardGameAttempt\Intermediate\Build\Win64\x64\UnrealEditor\Development\CardGameAttempt\Definitions.CardGameAttempt.h"
-/Yu"C:\Users\Van\Documents\Projects_Unreal\CardGameAttempt\Intermediate\Build\Win64\x64\CardGameAttemptEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h"
-/Fp"C:\Users\Van\Documents\Projects_Unreal\CardGameAttempt\Intermediate\Build\Win64\x64\CardGameAttemptEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h.pch"
-/Fo"C:\Users\Van\Documents\Projects_Unreal\CardGameAttempt\Intermediate\Build\Win64\x64\UnrealEditor\Development\CardGameAttempt\GenericGM.cpp.obj"
-/sourceDependencies C:\Users\Van\Documents\Projects_Unreal\CardGameAttempt\Intermediate\Build\Win64\x64\UnrealEditor\Development\CardGameAttempt\GenericGM.cpp.dep.json
+/FI"C:\Users\Van\Documents\Projects_Unreal\Repositories\Two-Button-Jam-2023\CardGameAttempt\Intermediate\Build\Win64\x64\CardGameAttemptEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h"
+/FI"C:\Users\Van\Documents\Projects_Unreal\Repositories\Two-Button-Jam-2023\CardGameAttempt\Intermediate\Build\Win64\x64\UnrealEditor\Development\CardGameAttempt\Definitions.CardGameAttempt.h"
+/Yu"C:\Users\Van\Documents\Projects_Unreal\Repositories\Two-Button-Jam-2023\CardGameAttempt\Intermediate\Build\Win64\x64\CardGameAttemptEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h"
+/Fp"C:\Users\Van\Documents\Projects_Unreal\Repositories\Two-Button-Jam-2023\CardGameAttempt\Intermediate\Build\Win64\x64\CardGameAttemptEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h.pch"
+/Fo"C:\Users\Van\Documents\Projects_Unreal\Repositories\Two-Button-Jam-2023\CardGameAttempt\Intermediate\Build\Win64\x64\UnrealEditor\Development\CardGameAttempt\GenericGM.cpp.obj"
+/sourceDependencies C:\Users\Van\Documents\Projects_Unreal\Repositories\Two-Button-Jam-2023\CardGameAttempt\Intermediate\Build\Win64\x64\UnrealEditor\Development\CardGameAttempt\GenericGM.cpp.dep.json
 /Zc:inline
 /nologo
 /Oi

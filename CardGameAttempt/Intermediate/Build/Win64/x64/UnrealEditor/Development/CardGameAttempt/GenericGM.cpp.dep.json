@@ -1,17 +1,17 @@
 {
     "Version": "1.1",
     "Data": {
-        "Source": "c:\\users\\van\\documents\\projects_unreal\\cardgameattempt\\source\\cardgameattempt\\private\\gamemodes\\genericgm.cpp",
+        "Source": "c:\\users\\van\\documents\\projects_unreal\\repositories\\two-button-jam-2023\\cardgameattempt\\source\\cardgameattempt\\private\\gamemodes\\genericgm.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\van\\documents\\projects_unreal\\cardgameattempt\\intermediate\\build\\win64\\x64\\cardgameattempteditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
+        "PCH": "c:\\users\\van\\documents\\projects_unreal\\repositories\\two-button-jam-2023\\cardgameattempt\\intermediate\\build\\win64\\x64\\cardgameattempteditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
         "Includes": [
-            "c:\\users\\van\\documents\\projects_unreal\\cardgameattempt\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\cardgameattempt\\definitions.cardgameattempt.h",
-            "c:\\users\\van\\documents\\projects_unreal\\cardgameattempt\\source\\cardgameattempt\\public\\gamemodes\\genericgm.h",
+            "c:\\users\\van\\documents\\projects_unreal\\repositories\\two-button-jam-2023\\cardgameattempt\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\cardgameattempt\\definitions.cardgameattempt.h",
+            "c:\\users\\van\\documents\\projects_unreal\\repositories\\two-button-jam-2023\\cardgameattempt\\source\\cardgameattempt\\public\\gamemodes\\genericgm.h",
             "c:\\program files\\epic games\\ue_5.2\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
             "c:\\program files\\epic games\\ue_5.2\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
             "c:\\program files\\epic games\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
             "c:\\program files\\epic games\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
-            "c:\\users\\van\\documents\\projects_unreal\\cardgameattempt\\intermediate\\build\\win64\\unrealeditor\\inc\\cardgameattempt\\uht\\genericgm.generated.h"
+            "c:\\users\\van\\documents\\projects_unreal\\repositories\\two-button-jam-2023\\cardgameattempt\\intermediate\\build\\win64\\unrealeditor\\inc\\cardgameattempt\\uht\\genericgm.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

@@ -1,11 +1,11 @@
 {
     "Version": "1.1",
     "Data": {
-        "Source": "c:\\users\\van\\documents\\projects_unreal\\cardgameattempt\\intermediate\\build\\win64\\unrealeditor\\inc\\cardgameattempt\\uht\\cardgameattempt.init.gen.cpp",
+        "Source": "c:\\users\\van\\documents\\projects_unreal\\repositories\\two-button-jam-2023\\cardgameattempt\\intermediate\\build\\win64\\unrealeditor\\inc\\cardgameattempt\\uht\\cardgameattempt.init.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\van\\documents\\projects_unreal\\cardgameattempt\\intermediate\\build\\win64\\x64\\cardgameattempteditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
+        "PCH": "c:\\users\\van\\documents\\projects_unreal\\repositories\\two-button-jam-2023\\cardgameattempt\\intermediate\\build\\win64\\x64\\cardgameattempteditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
         "Includes": [
-            "c:\\users\\van\\documents\\projects_unreal\\cardgameattempt\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\cardgameattempt\\definitions.cardgameattempt.h"
+            "c:\\users\\van\\documents\\projects_unreal\\repositories\\two-button-jam-2023\\cardgameattempt\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\cardgameattempt\\definitions.cardgameattempt.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

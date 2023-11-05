@@ -113,7 +113,7 @@ void UCardGameHUD::FireRightAction()
         }
 
         PlayAnimation(RightCardConfirmedAnim, 0.f, 1, EUMGSequencePlayMode::Forward, 1.f, false);
-        GetWorld()->GetTimerManager().SetTimer(ReturnCardsDelay, this, &ThisClass::LoadRightEvent, CurrentEvent->EventDialogueDuration, false);
+        GetWorld()->GetTimerManager().SetTimer(ReturnCardsDelay, this, &ThisClass::LoadRightEvent, 1.1f, false);
         choiceTrack = 0;
         return;
     }
@@ -151,19 +151,21 @@ void UCardGameHUD::LoadLeftEvent()
 {
     if(CurrentEvent)
     {
-        ACharacter* myCharacter = UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
-        FVector PlayerLoc = myCharacter->GetActorLocation();
-        Player->bCanReceiveInput = false;
-        GetWorld()->GetTimerManager().SetTimer(PlayerInputDelay, this, &ThisClass::EnablePlayerInput, CurrentEvent->EventDialogueDuration, false);
-
+        
         EventImg->SetBrushFromTexture(CurrentEvent->EventImage);
         LeftCard->LoadNewCardData(CurrentEvent->LeftCardData.CardName, CurrentEvent->LeftCardData.CardDescription, CurrentEvent->LeftCardData.CardImage);
         RightCard->LoadNewCardData(CurrentEvent->RightCardData.CardName, CurrentEvent->RightCardData.CardDescription, CurrentEvent->RightCardData.CardImage); 
         USoundBase* IntroAudio = CurrentEvent->EventSFX;
+        
+        ACharacter* myCharacter = UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
+        FVector PlayerLoc = myCharacter->GetActorLocation();
         if(IntroAudio)
         {
             UGameplayStatics::SpawnSoundAtLocation(this, IntroAudio, PlayerLoc);
         }
+
+        
+        GetWorld()->GetTimerManager().SetTimer(PlayerInputDelay, this, &ThisClass::EnablePlayerInput, CurrentEvent->EventDialogueDuration, false);
     }
 
     ResetCards();
@@ -173,19 +175,22 @@ void UCardGameHUD::LoadRightEvent()
 {
     if(CurrentEvent)
     {
-        ACharacter* myCharacter = UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
-        FVector PlayerLoc = myCharacter->GetActorLocation();
-        Player->bCanReceiveInput = false;
-        GetWorld()->GetTimerManager().SetTimer(PlayerInputDelay, this, &ThisClass::EnablePlayerInput, CurrentEvent->EventDialogueDuration, false);
+        
 
         EventImg->SetBrushFromTexture(CurrentEvent->EventImage);
         LeftCard->LoadNewCardData(CurrentEvent->LeftCardData.CardName, CurrentEvent->LeftCardData.CardDescription, CurrentEvent->LeftCardData.CardImage);
         RightCard->LoadNewCardData(CurrentEvent->RightCardData.CardName, CurrentEvent->RightCardData.CardDescription, CurrentEvent->RightCardData.CardImage); 
         USoundBase* IntroAudio = CurrentEvent->EventSFX;
+
+        ACharacter* myCharacter = UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
+        FVector PlayerLoc = myCharacter->GetActorLocation();
         if(IntroAudio)
         {
             UGameplayStatics::SpawnSoundAtLocation(this, IntroAudio, PlayerLoc);
         }
+
+        
+        GetWorld()->GetTimerManager().SetTimer(PlayerInputDelay, this, &ThisClass::EnablePlayerInput, CurrentEvent->EventDialogueDuration, false);
     }
 
     ResetCards();
