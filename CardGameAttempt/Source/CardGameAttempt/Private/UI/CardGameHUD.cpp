@@ -25,6 +25,9 @@ void UCardGameHUD::FireLeftAction()
     if(!Player->bCanReceiveInput) return;
     Player->bCanReceiveInput = false;
 
+    ACharacter* myCharacter = UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
+    FVector PlayerLoc = myCharacter->GetActorLocation();
+
     choiceTrack--;
     if(choiceTrack == -2) /** Left card selected as choice */
     {
@@ -36,22 +39,26 @@ void UCardGameHUD::FireLeftAction()
             if(NextEvent == FName(TEXT("END")))
             {
                 UKismetSystemLibrary::QuitGame(this, GetOwningPlayer(), EQuitPreference::Quit, true);
+                return;
             }
             if(NextEvent == FName(TEXT("REPLAY")))
             {
                 UGameplayStatics::OpenLevel(GetWorld(), FName(TEXT("StartingMap")));
+                return;
             }
         }
 
         PlayAnimation(LeftCardConfirmedAnim, 0.f, 1, EUMGSequencePlayMode::Forward, 1.f, false);
+
+        if(CardSwipeSFX) UGameplayStatics::SpawnSoundAtLocation(this, CardSwipeSFX, PlayerLoc);
+
         GetWorld()->GetTimerManager().SetTimer(ReturnCardsDelay, this, &ThisClass::LoadLeftEvent, 1.1f, false);
         choiceTrack = 0;
         return;
     }
     if(choiceTrack == -1) /** Looking at left card */
     {
-        ACharacter* myCharacter = UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
-        FVector PlayerLoc = myCharacter->GetActorLocation();
+        
         if(CardPickedSFX) UGameplayStatics::SpawnSoundAtLocation(this, CardPickedSFX, PlayerLoc);
         GetWorld()->GetTimerManager().SetTimer(PlayerInputDelay, this, &ThisClass::EnablePlayerInput, .26f, false);
         PlayAnimation(LeftCardSelectedAnim, 0.f, 1, EUMGSequencePlayMode::Forward, 1.f, false);
@@ -64,8 +71,12 @@ void UCardGameHUD::FireLeftAction()
         return;
     }
 }
+
 void UCardGameHUD::FireRightAction()
 {
+    ACharacter* myCharacter = UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
+    FVector PlayerLoc = myCharacter->GetActorLocation();
+
     if(!bPlayedIntro) 
     {
         Player = Cast<ABasicCharacter>(GetOwningPlayer()->GetCharacter());
@@ -77,8 +88,7 @@ void UCardGameHUD::FireRightAction()
     if(!bStartedGame)
     {
         
-        ACharacter* myCharacter = UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
-        FVector PlayerLoc = myCharacter->GetActorLocation();
+        
         if(IntroSFX) UGameplayStatics::SpawnSoundAtLocation(this, IntroSFX, PlayerLoc);
         PlayAnimation(StartGameAnim, 0.f, 1, EUMGSequencePlayMode::Forward, 1.f, false);
         bStartedGame = true;
@@ -122,13 +132,16 @@ void UCardGameHUD::FireRightAction()
             if(NextEvent == FName(TEXT("END")))
             {
                 UKismetSystemLibrary::QuitGame(this, GetOwningPlayer(), EQuitPreference::Quit, true);
+                return;
             }
             if(NextEvent == FName(TEXT("REPLAY")))
             {
                 UGameplayStatics::OpenLevel(GetWorld(), FName(TEXT("StartingMap")));
+                return;
             }
         }
-        
+
+        if(CardSwipeSFX) UGameplayStatics::SpawnSoundAtLocation(this, CardSwipeSFX, PlayerLoc);
         PlayAnimation(RightCardConfirmedAnim, 0.f, 1, EUMGSequencePlayMode::Forward, 1.f, false);
         GetWorld()->GetTimerManager().SetTimer(ReturnCardsDelay, this, &ThisClass::LoadRightEvent, 1.1f, false);
         choiceTrack = 0;
@@ -136,8 +149,6 @@ void UCardGameHUD::FireRightAction()
     }
     if(choiceTrack == 1) /** Looking at right card */
     {
-        ACharacter* myCharacter = UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
-        FVector PlayerLoc = myCharacter->GetActorLocation();
         if(CardPickedSFX) UGameplayStatics::SpawnSoundAtLocation(this, CardPickedSFX, PlayerLoc);
         GetWorld()->GetTimerManager().SetTimer(PlayerInputDelay, this, &ThisClass::EnablePlayerInput, .26f, false);
         PlayAnimation(RightCardSelectedAnim, 0.f, 1, EUMGSequencePlayMode::Forward, 1.f, false);

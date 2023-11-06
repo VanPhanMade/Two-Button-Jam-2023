@@ -61,6 +61,9 @@ private:
 	class USoundBase* CardPickedSFX;
 
 	UPROPERTY(EditAnywhere, Category="Variables", meta=(AllowPrivateAccess="true"))
+	class USoundBase* CardSwipeSFX;
+
+	UPROPERTY(EditAnywhere, Category="Variables", meta=(AllowPrivateAccess="true"))
 	class UDataTable* EventsDataTable;
 
 	/** This number represents if the user is going left or right and what animation to play based off if they're going left or right input*/
