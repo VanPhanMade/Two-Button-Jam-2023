@@ -3,6 +3,15 @@ https://www.artstation.com/artwork/zD1ez6
 
 /** Audio */
 
+https://speechify.com/text-to-speech-online/?utm_medium=cpc&utm_content=text-to-speech&gc_id=20379552709&gclid=CjwKCAjw15eqBhBZEiwAbDomEoGYvfQcYoYhTNc5HMEd48hyx0QWfk8xMrsfyxLThAe4fmPio77NbhoCEisQAvD_BwE&landing_url=https%3A%2F%2Fspeechify.com%2Fvoiceover-lp-3%2F&utm_source=google&utm_campaign=search-alpha&utm_term=free+ai+text+to+speech&h_ad_id=665961195281&ttsvoice=Oliver&ttsgender=male&ttslang=English
+
+https://speechify.com/text-to-speech-online/?utm_medium=cpc&utm_content=text-to-speech&gc_id=20379552709&gclid=CjwKCAjw15eqBhBZEiwAbDomEoGYvfQcYoYhTNc5HMEd48hyx0QWfk8xMrsfyxLThAe4fmPio77NbhoCEisQAvD_BwE&landing_url=https%3A%2F%2Fspeechify.com%2Fvoiceover-lp-3%2F&utm_source=google&utm_campaign=search-alpha&utm_term=free+ai+text+to+speech&h_ad_id=665961195281&ttsvoice=Jenny&ttsgender=female&ttslang=English
+https://freesound.org/people/Otakua/sounds/217904/
+
+https://freesound.org/people/bsperan/sounds/110817/
+
+https://freesound.org/people/SubwaySandwitch420/sounds/540770/
+
 https://freesound.org/people/scotcampbell/sounds/263708/
 
 https://freesound.org/people/999999990/sounds/320345/
@@ -23,8 +32,6 @@ https://freesound.org/people/MATRIXXX_/sounds/657947/
 
 https://www.naturalreaders.com/online/
 
-https://speechify.com/text-to-speech-online/?utm_medium=cpc&utm_content=text-to-speech&gc_id=20379552709&gclid=CjwKCAjw15eqBhBZEiwAbDomEoGYvfQcYoYhTNc5HMEd48hyx0QWfk8xMrsfyxLThAe4fmPio77NbhoCEisQAvD_BwE&landing_url=https%3A%2F%2Fspeechify.com%2Fvoiceover-lp-3%2F&utm_source=google&utm_campaign=search-alpha&utm_term=free+ai+text+to+speech&h_ad_id=665961195281&ttsvoice=Oliver&ttsgender=male&ttslang=English
-
 https://freesound.org/people/Otakua/sounds/217909/
 
 https://freesound.org/people/taure/sounds/380156/
@@ -40,6 +47,8 @@ https://freesound.org/people/ARodLRU2018/sounds/662316/
 https://freesound.org/people/Anthousai/sounds/399008/
 
 https://freesound.org/people/KevinHilt/sounds/196541/
+
+https://freesound.org/people/Kawgrim/sounds/584864/
 
 /** Images */
 
