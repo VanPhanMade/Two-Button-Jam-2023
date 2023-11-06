@@ -128,7 +128,7 @@ void UCardGameHUD::FireRightAction()
                 UGameplayStatics::OpenLevel(GetWorld(), FName(TEXT("StartingMap")));
             }
         }
-
+        
         PlayAnimation(RightCardConfirmedAnim, 0.f, 1, EUMGSequencePlayMode::Forward, 1.f, false);
         GetWorld()->GetTimerManager().SetTimer(ReturnCardsDelay, this, &ThisClass::LoadRightEvent, 1.1f, false);
         choiceTrack = 0;
