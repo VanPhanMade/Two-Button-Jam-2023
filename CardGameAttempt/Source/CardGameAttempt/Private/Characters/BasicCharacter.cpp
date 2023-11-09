@@ -17,6 +17,9 @@
 ABasicCharacter::ABasicCharacter()
 {
 	PrimaryActorTick.bCanEverTick = true;
+
+	CameraComponent = CreateDefaultSubobject<UCameraComponent>(FName(TEXT("Camera")));
+	CameraComponent->SetupAttachment(RootComponent);
 }
 
 void ABasicCharacter::BeginPlay()

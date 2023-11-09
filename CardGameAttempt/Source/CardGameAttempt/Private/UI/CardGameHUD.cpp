@@ -34,8 +34,7 @@ void UCardGameHUD::FireLeftAction()
         static const FString ContextString(TEXT("Event Context String"));
         if(EventsDataTable)
         {
-            FName NextEvent = CurrentEvent->LeftCardData.ConnectedEvent;
-            CurrentEvent = EventsDataTable->FindRow<FEventData>(NextEvent, ContextString, true);   
+            FName NextEvent = CurrentEvent->LeftCardData.ConnectedEvent; 
             if(NextEvent == FName(TEXT("END")))
             {
                 UKismetSystemLibrary::QuitGame(this, GetOwningPlayer(), EQuitPreference::Quit, true);
@@ -43,9 +42,10 @@ void UCardGameHUD::FireLeftAction()
             }
             if(NextEvent == FName(TEXT("REPLAY")))
             {
-                UGameplayStatics::OpenLevel(GetWorld(), FName(TEXT("StartingMap")));
-                return;
+                NextEvent = FName(TEXT("Intro"));   
+                //UGameplayStatics::OpenLevel(GetWorld(), FName(TEXT("StartingMap")));
             }
+            CurrentEvent = EventsDataTable->FindRow<FEventData>(NextEvent, ContextString, true);  
         }
 
         PlayAnimation(LeftCardConfirmedAnim, 0.f, 1, EUMGSequencePlayMode::Forward, 1.f, false);
@@ -128,7 +128,6 @@ void UCardGameHUD::FireRightAction()
         if(EventsDataTable)
         {
             FName NextEvent = CurrentEvent->RightCardData.ConnectedEvent;
-            CurrentEvent = EventsDataTable->FindRow<FEventData>(NextEvent, ContextString, true);
             if(NextEvent == FName(TEXT("END")))
             {
                 UKismetSystemLibrary::QuitGame(this, GetOwningPlayer(), EQuitPreference::Quit, true);
@@ -136,9 +135,10 @@ void UCardGameHUD::FireRightAction()
             }
             if(NextEvent == FName(TEXT("REPLAY")))
             {
-                UGameplayStatics::OpenLevel(GetWorld(), FName(TEXT("StartingMap")));
-                return;
+                NextEvent = FName(TEXT("Intro"));  
+                //UGameplayStatics::OpenLevel(GetWorld(), FName(TEXT("StartingMap")));
             }
+            CurrentEvent = EventsDataTable->FindRow<FEventData>(NextEvent, ContextString, true);
         }
 
         if(CardSwipeSFX) UGameplayStatics::SpawnSoundAtLocation(this, CardSwipeSFX, PlayerLoc);
