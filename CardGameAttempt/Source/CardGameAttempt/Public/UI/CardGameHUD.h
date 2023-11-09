@@ -84,4 +84,5 @@ private:
 	void ResetCards();
 	void LoadLeftEvent();
 	void LoadRightEvent();
+	void CheckSpecialConditions(FName &NextEvent);
 };

@@ -8,6 +8,7 @@
 #include "Engine/DataTable.h"
 #include "Data/EventData.h"
 #include "Kismet/KismetSystemLibrary.h"
+#include "GameModes/GenericGM.h"
 
 /** Audio libraries */
 #include "Sound/SoundBase.h"
@@ -31,21 +32,11 @@ void UCardGameHUD::FireLeftAction()
     choiceTrack--;
     if(choiceTrack == -2) /** Left card selected as choice */
     {
-        static const FString ContextString(TEXT("Event Context String"));
+        
         if(EventsDataTable)
         {
             FName NextEvent = CurrentEvent->LeftCardData.ConnectedEvent; 
-            if(NextEvent == FName(TEXT("END")))
-            {
-                UKismetSystemLibrary::QuitGame(this, GetOwningPlayer(), EQuitPreference::Quit, true);
-                return;
-            }
-            if(NextEvent == FName(TEXT("REPLAY")))
-            {
-                NextEvent = FName(TEXT("Intro"));   
-                //UGameplayStatics::OpenLevel(GetWorld(), FName(TEXT("StartingMap")));
-            }
-            CurrentEvent = EventsDataTable->FindRow<FEventData>(NextEvent, ContextString, true);  
+            CheckSpecialConditions(NextEvent);
         }
 
         PlayAnimation(LeftCardConfirmedAnim, 0.f, 1, EUMGSequencePlayMode::Forward, 1.f, false);
@@ -124,21 +115,10 @@ void UCardGameHUD::FireRightAction()
     choiceTrack++;
     if(choiceTrack == 2) /** Right card selected as choice */
     {
-        static const FString ContextString(TEXT("Event Context String"));
         if(EventsDataTable)
         {
             FName NextEvent = CurrentEvent->RightCardData.ConnectedEvent;
-            if(NextEvent == FName(TEXT("END")))
-            {
-                UKismetSystemLibrary::QuitGame(this, GetOwningPlayer(), EQuitPreference::Quit, true);
-                return;
-            }
-            if(NextEvent == FName(TEXT("REPLAY")))
-            {
-                NextEvent = FName(TEXT("Intro"));  
-                //UGameplayStatics::OpenLevel(GetWorld(), FName(TEXT("StartingMap")));
-            }
-            CurrentEvent = EventsDataTable->FindRow<FEventData>(NextEvent, ContextString, true);
+            CheckSpecialConditions(NextEvent);
         }
 
         if(CardSwipeSFX) UGameplayStatics::SpawnSoundAtLocation(this, CardSwipeSFX, PlayerLoc);
@@ -213,4 +193,30 @@ void UCardGameHUD::LoadRightEvent()
     }
 
     ResetCards();
+}
+
+void UCardGameHUD::CheckSpecialConditions(FName &NextEvent)
+{
+    static const FString ContextString(TEXT("Event Context String"));
+
+    if(NextEvent == FName(TEXT("END"))) UKismetSystemLibrary::QuitGame(this, GetOwningPlayer(), EQuitPreference::Quit, true);
+
+    if(NextEvent == FName(TEXT("REPLAY"))) {
+        if(Cast<AGenericGM>(UGameplayStatics::GetGameMode(GetWorld()))->bAllSurvivorsAlive())
+        {
+            UE_LOG(LogTemp, Display, TEXT("All survivors backs."));
+            NextEvent = FName(TEXT("Intro"));
+        }
+        else NextEvent = FName(TEXT("Intro"));
+    }
+
+    if(NextEvent == FName(TEXT("PlayingCello"))) Cast<AGenericGM>(UGameplayStatics::GetGameMode(GetWorld()))->ReviveCharacter(0);
+
+    if(NextEvent == FName(TEXT("MonsterRetreats"))) Cast<AGenericGM>(UGameplayStatics::GetGameMode(GetWorld()))->ReviveCharacter(1);
+
+    if(NextEvent == FName(TEXT("PuppyEvent"))) Cast<AGenericGM>(UGameplayStatics::GetGameMode(GetWorld()))->ReviveCharacter(2);
+
+    if(NextEvent == FName(TEXT("AxeAcquired"))) Cast<AGenericGM>(UGameplayStatics::GetGameMode(GetWorld()))->ReviveCharacter(3);
+
+    CurrentEvent = EventsDataTable->FindRow<FEventData>(NextEvent, ContextString, true);
 }
