@@ -66,6 +66,12 @@ private:
 	UPROPERTY(EditAnywhere, Category="Variables", meta=(AllowPrivateAccess="true"))
 	class UDataTable* EventsDataTable;
 
+	UPROPERTY( meta = ( BindWidget ), meta=(AllowPrivateAccess="true"))
+	class UTextBlock* SurvivorGainedText;
+
+	UPROPERTY(Transient, meta = ( BindWidgetAnim ))
+	class UWidgetAnimation* SurvivorGainedAnimation;
+
 	/** This number represents if the user is going left or right and what animation to play based off if they're going left or right input*/
 	float choiceTrack = 0; 
 

@@ -9,6 +9,7 @@
 #include "Data/EventData.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "GameModes/GenericGM.h"
+#include "Components/TextBlock.h"
 
 /** Audio libraries */
 #include "Sound/SoundBase.h"
@@ -205,18 +206,43 @@ void UCardGameHUD::CheckSpecialConditions(FName &NextEvent)
         if(Cast<AGenericGM>(UGameplayStatics::GetGameMode(GetWorld()))->bAllSurvivorsAlive())
         {
             UE_LOG(LogTemp, Display, TEXT("All survivors backs."));
-            NextEvent = FName(TEXT("Intro"));
+            NextEvent = FName(TEXT("SecretIntro"));
         }
         else NextEvent = FName(TEXT("Intro"));
     }
 
-    if(NextEvent == FName(TEXT("PlayingCello"))) Cast<AGenericGM>(UGameplayStatics::GetGameMode(GetWorld()))->ReviveCharacter(0);
+    if(NextEvent == FName(TEXT("PlayingCello"))) 
+    {
+        
+        SurvivorGainedText->SetText(FText::FromString("Thomas was found!"));
+        PlayAnimation(SurvivorGainedAnimation, 0.f, 1, EUMGSequencePlayMode::Forward, 1.f, false);
 
-    if(NextEvent == FName(TEXT("MonsterRetreats"))) Cast<AGenericGM>(UGameplayStatics::GetGameMode(GetWorld()))->ReviveCharacter(1);
+        Cast<AGenericGM>(UGameplayStatics::GetGameMode(GetWorld()))->ReviveCharacter(0);
+    }
 
-    if(NextEvent == FName(TEXT("PuppyEvent"))) Cast<AGenericGM>(UGameplayStatics::GetGameMode(GetWorld()))->ReviveCharacter(2);
+    if(NextEvent == FName(TEXT("MonsterRetreats"))) 
+    {
+        SurvivorGainedText->SetText(FText::FromString("Erica was found!"));
+        PlayAnimation(SurvivorGainedAnimation, 0.f, 1, EUMGSequencePlayMode::Forward, 1.f, false);
 
-    if(NextEvent == FName(TEXT("AxeAcquired"))) Cast<AGenericGM>(UGameplayStatics::GetGameMode(GetWorld()))->ReviveCharacter(3);
+        Cast<AGenericGM>(UGameplayStatics::GetGameMode(GetWorld()))->ReviveCharacter(1);
+    }
+
+    if(NextEvent == FName(TEXT("PuppyEvent"))) 
+    {
+        SurvivorGainedText->SetText(FText::FromString("Julia was found!"));
+        PlayAnimation(SurvivorGainedAnimation, 0.f, 1, EUMGSequencePlayMode::Forward, 1.f, false);
+
+        Cast<AGenericGM>(UGameplayStatics::GetGameMode(GetWorld()))->ReviveCharacter(2);
+    }
+
+    if(NextEvent == FName(TEXT("AxeAcquired"))) 
+    {
+        SurvivorGainedText->SetText(FText::FromString("Chad was found!"));
+        PlayAnimation(SurvivorGainedAnimation, 0.f, 1, EUMGSequencePlayMode::Forward, 1.f, false);
+
+        Cast<AGenericGM>(UGameplayStatics::GetGameMode(GetWorld()))->ReviveCharacter(3);
+    }
 
     CurrentEvent = EventsDataTable->FindRow<FEventData>(NextEvent, ContextString, true);
 }
