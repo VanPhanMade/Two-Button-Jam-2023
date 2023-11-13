@@ -211,9 +211,8 @@ void UCardGameHUD::CheckSpecialConditions(FName &NextEvent)
         else NextEvent = FName(TEXT("Intro"));
     }
 
-    if(NextEvent == FName(TEXT("PlayingCello"))) 
+    if(NextEvent == FName(TEXT("Waterfall"))) 
     {
-        
         SurvivorGainedText->SetText(FText::FromString("Thomas was found!"));
         PlayAnimation(SurvivorGainedAnimation, 0.f, 1, EUMGSequencePlayMode::Forward, 1.f, false);
 
